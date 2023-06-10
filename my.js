@@ -1,7 +1,10 @@
 let user_name = document.getElementById("inputName")
 let user_number = document.getElementById("inputNumber")
 
-let kontakts_list = JSON.parse(localStorage.getItem("kontakts"))
+let kontakts_list = []
+if (JSON.parse(localStorage.getItem("kontakts")) != null){
+    kontakts_list = JSON.parse(localStorage.getItem("kontakts"))
+}
 let last_id = JSON.parse(localStorage.getItem("id"))
 
 class user{
